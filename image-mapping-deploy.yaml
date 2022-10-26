@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-test
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: nginx-test
+  template:
+    metadata:
+      labels:
+        app: nginx-test
+    spec:
+      hostname: nginx-test
+      containers:
+        - name: nginx-test
+          image: gcr.io/apiiro/test/nginx-test/nginx-test:latest
+          imagePullPolicy: Always
