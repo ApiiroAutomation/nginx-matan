@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-test
+  name: nginx-matan
 spec:
   replicas: 1
   revisionHistoryLimit: 1
@@ -9,14 +9,14 @@ spec:
     type: Recreate
   selector:
     matchLabels:
-      app: nginx-test
+      app: nginx-mata
   template:
     metadata:
       labels:
-        app: nginx-test
+        app: nginx-matan
     spec:
-      hostname: nginx-test
+      hostname: nginx-matan
       containers:
-        - name: nginx-test
+        - name: nginx-matan
           image: gcr.io/apiiro/test/nginx-test/nginx-test:latest
           imagePullPolicy: Always
