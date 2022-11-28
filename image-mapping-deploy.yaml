@@ -18,5 +18,5 @@ spec:
       hostname: nginx-matan
       containers:
         - name: nginx-matan
-          image: gcr.io/apiiro/test/nginx-matan:latest
+          image: gcr.io/apiiro/nginx-matan:latest
           imagePullPolicy: Always
