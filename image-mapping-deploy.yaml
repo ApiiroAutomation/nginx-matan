@@ -9,7 +9,7 @@ spec:
     type: Recreate
   selector:
     matchLabels:
-      app: nginx-mata
+      app: nginx-matan
   template:
     metadata:
       labels:
